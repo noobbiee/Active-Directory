@@ -110,7 +110,29 @@ Go to serrver manager; files and storage services
 
 ![Screenshot from 2025-05-03 16-04-09](https://github.com/user-attachments/assets/ba8aa89f-13b2-4b80-b0fa-9f308316d8d6)
 
+# Group policy
+Go to group policy management, click on forest and go to domain right click and create a GPO
 
+![Screenshot from 2025-05-03 17-48-43](https://github.com/user-attachments/assets/028353f6-4871-4b10-a007-c98ae5cfe95e)
 
+![Screenshot from 2025-05-03 17-49-00](https://github.com/user-attachments/assets/c6d39bc6-01f6-4569-8bd0-595b0df47902)
+
+![Screenshot from 2025-05-03 17-49-49](https://github.com/user-attachments/assets/2b0b68f4-25fb-4142-8bce-d6ed0897b0ec)
+
+![Screenshot from 2025-05-03 17-50-34](https://github.com/user-attachments/assets/087c0dc0-eb0b-48fa-84d3-020b18838ef4)
+
+![Screenshot from 2025-05-03 17-50-51](https://github.com/user-attachments/assets/8ae9e4fe-250e-4d8b-9155-ffe146b1f717)
+
+![Screenshot from 2025-05-03 17-51-12](https://github.com/user-attachments/assets/1987077c-547e-4148-8f52-64cd31cff0ff)
+
+# set up the ip
+go to cmd and look for your ip address, check default gateway
+then go to your network connections
+
+![Screenshot from 2025-05-03 18-22-03](https://github.com/user-attachments/assets/e4cc6f2d-ee95-4715-9be9-a591c2e1f190)
+
+![Screenshot from 2025-05-03 18-23-35](https://github.com/user-attachments/assets/4eb7b167-c99d-42ef-aade-5833693f9dce)
+
+We have finished our server configuration
 
 
