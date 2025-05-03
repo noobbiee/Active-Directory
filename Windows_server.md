@@ -98,7 +98,17 @@ Go to cmd prompt
 
 ![Screenshot from 2025-05-03 15-51-12](https://github.com/user-attachments/assets/fbe04585-403c-409a-a405-c4c7727c5c7d)
 
+# Create shared folders
 
+Go to serrver manager; files and storage services
+
+![Screenshot from 2025-05-03 16-03-25](https://github.com/user-attachments/assets/bb1e6cd2-4fa8-46c4-bfda-25db85751235)
+
+![Screenshot from 2025-05-03 16-03-36](https://github.com/user-attachments/assets/1312e171-a18d-41cd-aded-927ed0133b31)
+
+![Screenshot from 2025-05-03 16-03-53](https://github.com/user-attachments/assets/f24f121b-7400-4ae3-b21b-25965cc57fe2)
+
+![Screenshot from 2025-05-03 16-04-09](https://github.com/user-attachments/assets/ba8aa89f-13b2-4b80-b0fa-9f308316d8d6)
 
 
 
