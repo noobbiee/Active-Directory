@@ -8,3 +8,8 @@
 ![Screenshot from 2025-05-03 18-35-47](https://github.com/user-attachments/assets/0fd87584-205d-4ced-a7b0-826ff0f1756f)
 
 ![Screenshot from 2025-05-03 18-35-55](https://github.com/user-attachments/assets/5b36a297-0319-40c7-949c-577970c9a1ec)
+
+# Rename the PC
+![Screenshot from 2025-05-03 18-48-46](https://github.com/user-attachments/assets/72b7bdb3-eb5f-407d-8603-a0d932ddbbd4)
+
+# Join the Domain
