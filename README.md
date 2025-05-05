@@ -16,3 +16,14 @@ Kali linux
 https://www.kali.org/get-kali/#kali-platforms
 ```
 
+# Tools used
+Nmap
+Crackmapexec
+responder
+impacket-ntlmrelayx
+netcat
+arp-scan
+impacket-psexec
+
+
+
