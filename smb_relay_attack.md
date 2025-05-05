@@ -28,4 +28,6 @@ Lets create a file where we have the ip of our targets and we will feed it to im
 
 ![Screenshot from 2025-05-05 13-50-10](https://github.com/user-attachments/assets/23424c66-b20b-4467-9496-d05d926ee677)
 
-We got our hashes
+We got our hashes. Save the hashes in the file.
+
+
