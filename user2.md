@@ -37,3 +37,11 @@ The procedure are same as the user1
 
 ![Screenshot from 2025-05-05 10-26-33](https://github.com/user-attachments/assets/ef6e4a2f-9db0-4730-b37c-d30714022668)
 
+#sign in locally and map network drives
+
+![Screenshot from 2025-05-05 10-33-09](https://github.com/user-attachments/assets/86dab18b-71df-42e1-88e0-2a70cf73cd3c)
+
+![Screenshot from 2025-05-05 10-33-57](https://github.com/user-attachments/assets/cb74aa58-4310-4b3d-873e-3edbbe7b5374)
+
+We have completed the setup for the second user.
+
