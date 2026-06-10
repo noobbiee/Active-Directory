@@ -1,29 +1,6 @@
-# Active-Directory
+# Active Directory Penetration Testing Lab
 
-# Software used
-Windows server 2022
-```
-https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022
-````
+A lab built to simulate a real enterprise Active Directory environment and practice offensive security techniques including enumeration, credential attacks, lateral movement, and privilege escalation.
 
-Windows 10 enterprise 
-```
-https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise
-```
-
-Kali linux
-```
-https://www.kali.org/get-kali/#kali-platforms
-```
-
-# Tools used
-Nmap
-Crackmapexec
-responder
-impacket-ntlmrelayx
-netcat
-arp-scan
-impacket-psexec
-
-
-
+🖥️ Lab Environment
+ComponentDetailsVirtualisationVirtualBoxDomain ControllerWindows Server 2022Attack MachineKali LinuxNetworkHost-only / Internal Network (isolated from internet)
