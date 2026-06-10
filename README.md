@@ -8,7 +8,10 @@ Component
 |
 Details
 |
-|---|---|---|
+|---
+|---
+|---
+|
 |
 Virtualisation
 |
