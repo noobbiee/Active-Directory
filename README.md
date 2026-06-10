@@ -7,3 +7,8 @@ A lab built to simulate a real enterprise Active Directory environment and pract
 Component
 |
 Details
+|
+|
+Virtualisation
+|
+VirtualBox
