@@ -67,6 +67,11 @@ impacket-psexec administrator@192.168.0.72 -hashes
 | NTLM shell | Unusual powershell execution. outbound connections | Application whitelisting, contrained language mode |
 | Pass-the-hash | EventID 4624 logon type 3, lateral movement alerts | Enable Protected users group, disable NTLM where possible
 
+# Disclaimer
+This lab is built entirely for educational purposes in an isolated environment. All techniques emonstrated here are performed on the systems I own and control. Performing these attacks on systems without explicit authorisation is illegal.
+
+
+
 
    
    
