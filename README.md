@@ -60,8 +60,12 @@ Once we obtain NTLM hashes we can pass it, as the windows accepts it as valid cr
 impacket-psexec administrator@192.168.0.72 -hashes
 ```
 # Detection and mititgation
-| Technique | Detetction | Mititgation
-
+| Technique | Detetction | Mititgation |
+| --- | --- | --- |
+| LLMNR poisioning | Monitor for the LLMNR traffic on the network | Disable LLMNR and NBT-NS via GPO |
+| SMB relay | Detect ntlmrelayx signatures, unusual SMB sesions | Enable SMB signing on all hosts |
+| NTLM shell | Unusual powershell execution. outbound connections | Application whitelisting, contrained language mode |
+| Pass-the-hash | EventID 4624 logon type 3, lateral movement alerts | Enable Protected users group, disable NTLM where possible
 
 
    
