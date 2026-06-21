@@ -18,13 +18,15 @@ open the responder and make some changes if required
 
 # Responder
 
+```
+sudo responder -I eth0 -dpv
+```
+
+
 ![Screenshot from 2025-05-05 11-43-46](https://github.com/user-attachments/assets/af49d857-0d4d-4fd0-8be9-6d3b3bcd5470)
 
 lets start the responder 
 
-```
-sudo responder -I eth0 -dpv
-```
 
 
 ![Screenshot from 2025-05-05 11-53-25](https://github.com/user-attachments/assets/7d8d141d-197c-4169-813b-07fc2e3f15e3)
