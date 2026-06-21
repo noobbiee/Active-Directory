@@ -7,6 +7,9 @@ to the admin account
 
 # impacket-psexc
  We will use impacket to the hash to access the admin account
+ ```
+impacket-psexec administrator@192.168.0.72 -hashes
+```
  
  ![Screenshot from 2025-05-05 19-26-28](https://github.com/user-attachments/assets/b58b852d-cfa4-48db-9b07-15dfbfde59ac)
 
