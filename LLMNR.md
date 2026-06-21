@@ -7,15 +7,25 @@ For this attack to work user who tries to access the resources that they donot h
 # crackmapexec
 Lets use crackmapexec to map the smb
 
+```
+sudo arp-scan -I eth0 --localnet --ignoredups
+```
+
 ![Screenshot from 2025-05-05 11-42-31](https://github.com/user-attachments/assets/b2c32bc3-c70d-4894-8130-0dccdfbadfb4)
 
 For poisioning the traffice we will be using the responder
 open the responder and make some changes if required
 
+# Responder
 
 ![Screenshot from 2025-05-05 11-43-46](https://github.com/user-attachments/assets/af49d857-0d4d-4fd0-8be9-6d3b3bcd5470)
 
 lets start the responder 
+
+```
+sudo responder -I eth0 -dpv
+```
+
 
 ![Screenshot from 2025-05-05 11-53-25](https://github.com/user-attachments/assets/7d8d141d-197c-4169-813b-07fc2e3f15e3)
 
